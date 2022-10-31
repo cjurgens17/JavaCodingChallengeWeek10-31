@@ -3,12 +3,16 @@ public class Practice {
     public  static String atBash(String cipher){
 
         StringBuilder mirror = new StringBuilder("");
+        int lowLowCase = (int)'a';
+        int highLowCase = (int)'z';
+        int lowUpCase = (int)'A';
+        int HighUpCase = (int)'Z';
         for(int i =0;i<cipher.length();i++){
             char letter = cipher.charAt(i);
             int asciiValue = (int)letter;
-            if(asciiValue >=97 && asciiValue<=122){
+            if(asciiValue >=lowLowCase && asciiValue<=highLowCase){
                 //do operation for lowercase
-                int start = 97;
+                int start = lowLowCase;
                 int counter = 0;
 
                 while(start != asciiValue){
@@ -16,13 +20,13 @@ public class Practice {
                     start++;
                 }
 
-                asciiValue = 122-counter;
+                asciiValue = highLowCase-counter;
                 mirror.append((char) asciiValue);
 
 
-            }else if(asciiValue>=65 && asciiValue<=90){
+            }else if(asciiValue>=lowUpCase && asciiValue<=highUpCase){
                 //then we do uppercase operation
-                int start = 65;
+                int start = lowUpCase;
                 int counter = 0;
 
                 while(start != asciiValue){
@@ -30,7 +34,7 @@ public class Practice {
                     start++;
                 }
 
-                asciiValue = 90-counter;
+                asciiValue = highUpCase-counter;
                 mirror.append((char) asciiValue);
 
             }else{
