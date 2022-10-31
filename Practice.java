@@ -6,7 +6,7 @@ public class Practice {
         int lowLowCase = (int)'a';
         int highLowCase = (int)'z';
         int lowUpCase = (int)'A';
-        int HighUpCase = (int)'Z';
+        int highUpCase = (int)'Z';
         for(int i =0;i<cipher.length();i++){
             char letter = cipher.charAt(i);
             int asciiValue = (int)letter;
